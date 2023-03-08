@@ -3,7 +3,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
-@Component
+@Component // 스프링컨테이너에 등록되는 이름 : memoryMemberRepository
 public class MemoryMemberRepository implements MemberRepository {
   private static Map<Long, Member> store = new HashMap<>();
   @Override
