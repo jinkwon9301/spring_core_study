@@ -12,7 +12,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class OrderApp {
   public static void main(String[] args) {
 //    AppConfig appConfig = new AppConfig();
-//    MemberService memberService = appConfig.memberService();
+//    MemberService memberService = appConfig.memberService();f
 //    OrderService orderService = appConfig.orderService();
 
     ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
