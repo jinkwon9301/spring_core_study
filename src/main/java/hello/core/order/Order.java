@@ -1,4 +1,7 @@
 package hello.core.order;
+
+import java.util.Arrays;
+
 public class Order {
   private Long memberId;
   private String itemName;
