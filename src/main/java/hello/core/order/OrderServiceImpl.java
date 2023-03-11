@@ -1,4 +1,5 @@
 package hello.core.order;
+import hello.core.annotation.MainDiscountPolicy;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
@@ -31,7 +32,7 @@ public class OrderServiceImpl implements OrderService {
 //  }
 
 //  @Autowired // 생성자는 @Autowired 굳이 써줄 필요 없다. (생성자는 @RequiredArgsConstructor에 의해 롬복이 final을 보고 자동 생성 : cmd + F12로 확인해보자, 구현체 바로 탐색하기 : cmd + opt + B)
-  public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+  public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
     System.out.println("1. OrderServiceImpl.OrderServiceImpl");
     this.memberRepository = memberRepository;
     this.discountPolicy = discountPolicy;
